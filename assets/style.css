@@ -1,0 +1,224 @@
+/* Created Variables to change the colors in the root then to go to each line of code */
+:root {
+    --primary-color: white;
+    --text-color: gray;
+    --titlebox-color: turquoise;
+    --header-color: gray;
+    --border-color: turquoise;
+    --links-color: turquoise;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.grid-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+}
+.grid-item {
+    width: 750px;    
+    display: flex;
+    flex-wrap: flex;
+    flex-direction: row;
+}
+.grid-item-project {
+    width: 100px;
+    display: flex;
+    flex-wrap: flex;
+    flex-direction: row;
+}
+.grid-item-Contact {
+    width: 800px;
+    width: flex;
+    flex-wrap: flex;
+    flex-direction: row;
+}
+/*this will give a right border to About Me, Work, Contact Me */
+.grid-container > :nth-child(1), .grid-container > :nth-child(3), .grid-container > :nth-child(6) {
+    border-right: 3px solid black;
+    
+}
+/*-------------------------------------------------------Start of Header Section--------------------------------------------------------------*/
+header {
+    padding: 30px 45px;
+    background-color: var(--header-color);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    position: -webkit-sticky;
+    z-index: 9999;
+}
+/* targets the header 1 (h1) my name */
+header h1 {
+    color: var(--text-color);
+    font-size: 45px;     
+}
+/*creates a padding (box) around the header 1 (h1) */
+#heading {
+    padding: 20px 35px;
+    background-color: var(--titlebox-color);
+    margin-left: -5%;
+    width: 30%;
+    text-align: right;
+}
+/*changes the color of the links in the header */
+header a {
+    text-decoration: none;
+    color: var(--links-color);
+    border-bottom: 3px solid var(--titlebox-color);
+    margin: 5px;
+}
+
+header nav {
+    margin: 7px 0;
+}
+/*this targets the Unorderd List and fixes the list for mobile devices and sets the list next to each other */
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    flex: 1;
+}
+/*this targets each Anchor (a) in the Unordered List and styles it */
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 2.0vw;
+}
+/*this will let the User hover over the links and display a different style */
+header nav ul li a:hover {
+    background: var(--titlebox-color);
+    color: var(--text-color);
+    border-radius: 15px;
+    text-shadow: none;
+}
+/*-------------------------------------------------------*End of Header Section*--------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------Start of Subtitle Section--------------------------------------------------------------*/
+#subtitle { 
+    padding: 80px 95px;
+    display: flex;
+    background-image: url("../assets/images/pastel-blue-banner-design.jpg");
+    background-size: cover;
+    background-position: 80%;
+    justify-content: flex-end; /*this will move the text to the right side of the image background */
+}
+#subtitle h2 {
+    color: var(--text-color);
+    font-size: 2.0vw;
+    text-align: right;
+}
+/*-------------------------------------------------------*End of Subtitle Section*--------------------------------------------------------------*/
+
+
+/*----------------------------------------------Start of My Bio (About Me, Work, Contact Me, Resume) Section------------------------------------*/
+/*Start of About Me Section*/
+/*This targets the whole row of the "About Me" and styles it */
+#About-Me {
+    padding: 100px 105px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+/*This targets the "About Me","Work", and "Contact Me" text titles */
+.section-title {
+    font-size: 50px;
+    color: var(--text-color);
+
+}
+/*This targets the p (paragraph) in the About Me Section */
+section p {
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+/*End of About Me Section */
+
+/*Start of Work Section */
+#Work {
+    padding: 100px 100px;
+    background: var(--primary-color);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/*this targets the project-1 class "Horiseon" */
+.project-1 {
+    padding: 200px 360px;
+    background-color: var(--titlebox-color);
+    border: 5px var(--titlebox-color) solid;
+    margin: 3px;
+    background-image:url("./images/Horieson\ Project.png");
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+}
+/*this targets the project-2 class "Run Buddy" */
+.project-2 {
+    padding: 200px 360px;
+    background-color: var(--titlebox-color);
+    border: 5px var(--titlebox-color) solid;
+    margin: 3px;
+    background-image:url("./images/hero-bg.jpg");
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+}
+/*Use filter: grayscale (0); for the work background images to gray out, then use :hover for image and use filter: grayscale (1) which will bring the 
+image color back when you hover over it */
+.project-1:hover, .project-2:hover {
+    filter: grayscale(0);
+}
+/*-------------------------------------------------------End of My Bio Section--------------------------------------------------------------*/
+
+/*-------------------------------------------------------Start of Footer Section--------------------------------------------------------------*/
+
+/*Start of Contact Me Section */
+footer {
+    padding: 30px 45px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+footer a {
+    text-decoration: none;
+    color: var(--links-color);
+    border-bottom: 3px solid var(--titlebox-color);
+    margin: 5px;
+}
+footer nav {
+    margin: 7px 0;
+}
+footer nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    flex: 1;
+}
+footer nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 2.0vw;
+}
+footer nav ul li a:hover {
+    background: var(--titlebox-color);
+    color: var(--text-color);
+    border-radius: 15px;
+    text-shadow: none;
+}
