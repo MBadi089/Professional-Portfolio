@@ -13,3 +13,5 @@ I provided working links and a layout similar to the mock up but not to the "T" 
 link to my github page
 https://github.com/MBadi089
 
+link to deploy app
+https://mbadi089.github.io/Professional-Portfolio/
